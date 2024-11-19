@@ -80,15 +80,18 @@
   text-align: center;
 }
 
-#image {
-  width: 300px;
-  height: 400px;
+.thumbnail {
+  width: 150px;
+  height: auto;
   transition: transform 0.3s ease; /* Smooth transition effect */
   cursor: pointer; /* Indicate that the image is clickable */
 }
 
-#image.enlarged {
-  transform: scale(1.5); /* Enlarge image to 1.5x its size */
+.enlarged {
+  transform: scale(2); /* Enlarge image to 1.5x its size */
+  z-index: 1000;
+  position: relative;
+  
 }
     </style>
 </head>

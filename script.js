@@ -1,8 +1,9 @@
-// Select the image element
-const image = document.getElementById('image');
+const images = document.querySelectorAll('img');
 
-// Add a click event listener to the image
-image.addEventListener('click', function() {
-  // Toggle the 'enlarged' class on click
-  image.classList.toggle('enlarged');
+// Loop through each image and add an event listener
+images.forEach(image => {
+  image.addEventListener('click', function() {
+    // Toggle the enlarged class on click
+    image.classList.toggle('enlarged');
+  });
 });
