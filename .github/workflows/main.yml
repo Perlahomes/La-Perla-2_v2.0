@@ -1,0 +1,27 @@
+name: Generate new link on push
+
+on:
+  push:
+    branches:
+      - main  # Trigger on changes to the 'main' branch
+
+jobs:
+  generate-link:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate new link
+        run: |
+          # Example: you can modify this script to generate your new link
+          NEW_LINK="https://mywebsite.com/new-link"
+          echo "New Link: $NEW_LINK"
+          
+      # You can also upload the generated link as an artifact if needed
+      - name: Upload link
+        uses: actions/upload-artifact@v3
+        with:
+          name: new-link
+          path: path_to_generated_link.txt
