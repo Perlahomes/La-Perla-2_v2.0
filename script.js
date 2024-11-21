@@ -10,7 +10,7 @@ images.forEach(image => {
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-      pageLanguage: 'en',
+      pageLanguage: 'gr',
       includedLanguages: 'en,gr,es,fr,de,zh-CN,ja,ru', // Add more languages as needed
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
