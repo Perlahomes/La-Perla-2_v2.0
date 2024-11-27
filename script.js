@@ -7,4 +7,3 @@ images.forEach(image => {
     image.classList.toggle('enlarged');
   });
 });
-
