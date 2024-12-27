@@ -1,0 +1,155 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+/* Layout styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color:#fcfcfa;
+    color: #070707;
+    background-color:#5b7473;
+    
+}
+.Nicolas {
+    background-color: #5b7473;
+    color: #e2c487;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 25px;
+    text-align: center;
+}
+
+.Food{
+    background-color: #e2c487;
+    color: #080808;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 25px;
+    text-align: center;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    height: 200px;  /* Adjust height of the header */
+    background-image: url('images/perla-homes-logo-black-1024x508.png');  /* Set your image path here */
+    background-size: cover;  /* Cover the whole header with the image */
+    background-position: center;  /* Center the image */
+    color: white;  /* Text color */
+    display: flex;
+    justify-content: center;  /* Center the text horizontally */
+    align-items: center;  /* Center the text vertically */
+    text-align: center;  /* Center text inside */
+
+    
+
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #007BFF;
+}
+
+header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.instructions {
+    margin-top: 20px;
+    background-color: #acbcb4;
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #0e0d0d;
+}
+
+.step p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #070707;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+#foodpic {
+
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: #e2c487;
+    background-color: #acbcb4;
+    padding: 25px;
+}
+.thumbnail {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    cursor: pointer; /* Indicate that the image is clickable */
+  }
+  
+  .enlarged {
+    transform: scale(2); /* Enlarge image to 1.5x its size */
+    z-index: 1000;
+    position: relative;
+    
+  }
+
+  .Numbers{
+    
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e2c487;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .step h2 {
+        font-size: 1.3rem;
+    }
+
+    .step p {
+        font-size: 1.1rem;
+    }
+}
