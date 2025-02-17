@@ -1,4 +1,3 @@
-/* Basic Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -47,12 +46,9 @@ body::after {
     left: 1px;
     z-index: 9999;
     padding: 5px;
-    
     border: 1px solid #ccc; /* Optional border */
     border-radius: 5px; /* Optional rounded corners */
 }
-
-
 
 /* Button container */
 .button-container {
@@ -71,6 +67,20 @@ body::after {
     text-align: center;
 }
 
+/* Pulse Animation for buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Button grows */
+    }
+    100% {
+        transform: scale(1); /* Button returns to original size */
+    }
+}
+
+/* Styling for round buttons */
 .round-btn {
     background-color: #eff5ef;
     color: white;
@@ -83,25 +93,56 @@ body::after {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition */
     overflow: hidden; /* Ensure image stays inside the circle */
     margin-bottom: 8px; /* Space between button and text */
+    animation: pulse 5s infinite; /* Apply pulse animation */
 }
 
+/* Hover effect for the round buttons */
 .round-btn:hover {
     background-color: #3d5e4d;
+    transform: scale(1.1); /* Slight enlargement on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for hover */
 }
 
+/* Bounce Animation on Hover */
+.round-btn:hover {
+    animation: bounce 0.3s ease; /* Apply bounce animation on hover */
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.1) translateY(0);
+    }
+    30% {
+        transform: scale(1.1) translateY(-5px); /* Move upwards */
+    }
+    50% {
+        transform: scale(1.1) translateY(0); /* Back to original position */
+    }
+    70% {
+        transform: scale(1.1) translateY(-3px); /* Small move upwards */
+    }
+    100% {
+        transform: scale(1.1) translateY(0); /* Final return to original position */
+    }
+}
+
+/* Focus effect */
 .round-btn:focus {
     outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Focus outline for accessibility */
 }
 
+/* Image inside the button */
 .round-btn img {
     width: 100%; /* Fill the button's width */
     height: 100%; /* Fill the button's height */
     object-fit: cover; /* Ensures the image covers the entire circle without distortion */
 }
 
+/* Button click effect */
 button:active {
     transform: scale(0.98); /* Slight scale-down effect on click */
 }
@@ -115,8 +156,7 @@ button:active {
 
 /* Footer */
 .footer {
-    background-color: #0f0f0f(0, 0, 0, 0.7); /* Optional: background for the footer */
-    background-color: rgb(140, 150, 144);
+    background-color: rgb(140, 150, 144); /* Optional: background for the footer */
     width: 100%;
     padding: 5px 0;
     text-align: center;
@@ -127,19 +167,13 @@ button:active {
     margin: 0;
 }
 
+/* Logo Styling */
 #logo {
     display: block;
     margin: 0 auto; /* Center the logo */
     max-width: 350px; /* Adjust the size as needed */
     height: auto; /* Keep the aspect ratio intact */
     margin-top: 100px;
-}
-
-.round-btn {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-.round-btn:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Styling for h1 element */
@@ -155,13 +189,14 @@ button:active {
 p {
     text-align: center; /* Centers the text */
     font-size: 1em;    /* Optional: adjust the font size */
-    color: white;        /* Optional: ensure the text is white */
-    margin-top: 5px;    /* Optional: add some spacing from the heading */
+    color: white;      /* Optional: ensure the text is white */
+    margin-top: 5px;   /* Optional: add some spacing from the heading */
 }
+
 /* Define the animation for fade-in effect */
 .fade-in {
     opacity: 0; /* Start as invisible */
-    animation: fadeInAnimation 2s forwards; /* Apply animation */
+    animation: fadeInAnimation 4s forwards; /* Apply animation */
 }
 
 @keyframes fadeInAnimation {
@@ -187,6 +222,7 @@ p {
     animation-duration: 3s;
 }
 
+/* Optional: Make images inside the page responsive */
 img1 {
     max-width: 100%;
     height: auto;
@@ -195,11 +231,12 @@ img1 {
     object-fit: contain; /* Ensures image is resized while maintaining aspect ratio */
 }
 
+/* Home Button Styling */
 a {
     color: rgb(32, 31, 31); /* Change to any color you like */
-  }
+}
 
-  .home-button {
+.home-button {
     position: fixed;
     top: 50px; /* Distance from the top */
     right: 10px; /* Distance from the right */
@@ -225,6 +262,7 @@ a {
     display: block;
     white-space: pre-line;
 }
+
 .social-media {
     margin-top: 10px;
     display: flex;
