@@ -225,3 +225,24 @@ a {
     display: block;
     white-space: pre-line;
 }
+.social-media {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 30px;  /* Size of the icons */
+    color: #000;      /* Icon color */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);  /* Slightly enlarge the icon on hover */
+    color: #0077b5;         /* Change color on hover (blue for Facebook) */
+}
+
+.social-media a:nth-child(2) .social-icon:hover {
+    color: #e4405f;  /* Change color on hover (red/pink for Instagram) */
+}
